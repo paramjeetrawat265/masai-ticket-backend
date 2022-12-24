@@ -1,6 +1,7 @@
 const { StudentModel } = require("../Models/student.models");
 
 const registerContoller = async (req, res) => {
+    console.log("register");
     const { name, email, password } = req.body;
     const isUser = await StudentModel.findOne({ email: email });
     if (isUser) {

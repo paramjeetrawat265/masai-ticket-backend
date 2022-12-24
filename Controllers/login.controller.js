@@ -1,7 +1,7 @@
 const { StudentModel } = require("../Models/student.models");
 
 const LoginController = async (req, res) => {
-    console.log(req.body)
+    console.log(login)
     const { email, password } = req.body;
     let isUser = await StudentModel.findOne({ email: email, password: password });
 

@@ -2,6 +2,7 @@ const { BookmarkModel } = require("../Models/bookmark.model");
 
 
 const PostBookmarkController = async (req, res) => {
+    console.log("bookmark")
     const {email,category,title}=req.body;
     const data=await BookmarkModel.findOne({email:email,category:category,title:title})
     if(data){
